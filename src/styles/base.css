@@ -1,0 +1,183 @@
+:root {
+	/* Typography */
+	--font-size-base: 1rem; /* 16px */
+	--font-size--2: 0.5625rem; /* 9px */
+	--font-size--1: 0.75rem; /* 12px */
+	--font-size-0: 1rem; /* 16px */
+	--font-size-1: 1.333rem; /* 21.33px */
+	--font-size-2: 1.778rem; /* 28.44px */
+	--font-size-3: 2.37rem; /* 37.92px */
+	--font-size-4: 3.16rem; /* 50.56px */
+	--font-size-5: 4.21rem; /* 67.39px */
+	--font-size-6: 5.62rem; /* 89.91px */
+	--line-height-base: 2;
+	--font-family-mono: "Courier New", Courier, monospace;
+
+	/* Spacing & Radius */
+	--border-radius-sm: 0.25rem;
+	--border-radius-md: 0.5rem;
+	--border-radius-lg: 1rem;
+	--padding-xs: 0.5rem;
+	--padding-sm: 1rem;
+	--padding-md: 2.5rem;
+	--padding-lg: 5rem;
+	--padding-xl: 7rem;
+
+	/* Color Theme */
+	--bg-main: #fdf0d5;
+	--text-main: #003049;
+	--foreground: #003049;
+	--border-color: #ffffff;
+
+	/* Buttons */
+	--btn-add-bg: #669bbc;
+	--btn-add-hover: #003049;
+	--btn-submit-bg: #669bbc;
+	--btn-submit-hover: #003049;
+	--btn-cancel-bg: #c1121f;
+	--btn-cancel-hover: #780000;
+	--button-hover-color: #ffffff;
+
+	/* Cards */
+	--card-front-bg: #ffffff;
+	--card-back-bg: #669bbc;
+	--card-back-text: #fdf0d5;
+
+	/* States */
+	--valid-input: green;
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+/* Base */
+body {
+	font-family: var(--font-family-mono);
+	font-size: var(--font-size-0);
+	line-height: var(--line-height-base);
+	height: 100vh;
+	width: 100vw;
+	background-color: var(--bg-main);
+	color: var(--text-main);
+}
+
+#app {
+	display: grid;
+	grid-template-rows: auto 1fr;
+	width: 80vw;
+	margin: 0 auto;
+	min-height: 100vh;
+}
+
+/* Headings */
+.page-title {
+	font-size: var(--font-size-5);
+}
+
+.projectTitle {
+	font-size: var(--font-size-3);
+}
+
+/* Inputs */
+.input {
+	width: 100%;
+	min-width: 400px;
+	border-radius: var(--border-radius-md);
+	padding: var(--padding-xs);
+	line-height: var(--line-height-base);
+	font-family: var(--font-family-mono);
+	border: 1px solid;
+	transition:
+		border-color 0.3s,
+		color 0.3s;
+}
+
+.dateInput {
+	width: fit-content;
+	border-radius: var(--border-radius-md);
+	padding: var(--padding-xs);
+}
+
+label {
+	min-width: max-content;
+}
+
+.textarea {
+	min-height: 100px;
+}
+
+.input:focus,
+.input:valid {
+	border-color: var(--valid-input);
+	color: var(--valid-input);
+}
+
+/* Buttons */
+button {
+	border-radius: var(--border-radius-md);
+	padding: 0 var(--padding-sm);
+	line-height: var(--line-height-base);
+	font-family: var(--font-family-mono);
+	font-size: var(--font-size-0);
+	border: 0.5px solid var(--border-color);
+	transition:
+		background-color 0.3s,
+		color 0.3s,
+		transform 0.3s;
+	cursor: pointer;
+}
+
+button:hover {
+	transform: scale(1.1);
+}
+
+/* Button Variants */
+.cancelButton {
+	background-color: var(--btn-cancel-bg);
+}
+.cancelButton:hover {
+	background-color: var(--btn-cancel-hover);
+	color: var(--button-hover-color);
+}
+
+.submitButton {
+	background-color: var(--btn-submit-bg);
+}
+.submitButton:hover {
+	background-color: var(--btn-submit-hover);
+	color: var(--button-hover-color);
+}
+
+.add-button {
+	background-color: var(--btn-add-bg);
+}
+.add-button:hover {
+	background-color: var(--btn-add-hover);
+	color: var(--button-hover-color);
+}
+
+.hoverEffect:hover {
+	color: var(--btn-cancel-hover);
+}
+
+/* Cards */
+.cardFront,
+.cardBack {
+	border-radius: var(--border-radius-lg);
+}
+.cardFront {
+	background-color: var(--card-front-bg);
+}
+.cardBack {
+	background-color: var(--card-back-bg);
+}
+
+.warning {
+	font-size: var(--font-size-4);
+}

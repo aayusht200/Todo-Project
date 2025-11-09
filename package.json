@@ -1,5 +1,5 @@
 {
-	"name": "file-name",
+	"name": "Todo Project",
 	"version": "1.0.0",
 	"description": "",
 	"main": "index.js",
@@ -26,6 +26,7 @@
 		"webpack-dev-server": "^5.2.2"
 	},
 	"dependencies": {
+		"biome": "^0.3.3",
 		"crypto-browserify": "^3.12.1"
 	}
 }

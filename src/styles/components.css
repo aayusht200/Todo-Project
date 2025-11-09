@@ -1,0 +1,65 @@
+.taskData > div {
+	border-right: 1px solid rgba(0, 0, 0, 0.155);
+	padding: var(--padding-sm);
+	border-radius: 0.5rem;
+}
+
+/* Front / Back faces */
+.cardFront,
+.cardBack {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: var(--padding-sm);
+	backface-visibility: hidden;
+	display: grid;
+	place-items: center;
+	transform: rotateX(10deg);
+	overflow: auto;
+}
+
+/* Card container with 3D rotation */
+.cardContent {
+	padding: var(--padding-lg);
+	text-align: center;
+	position: relative;
+	transition: transform 1s;
+	transform-style: preserve-3d;
+	display: grid;
+}
+
+/* Flip on hover */
+.projectCard:hover .cardContent {
+	transform: rotateY(0.5turn);
+}
+
+.cardFront::after {
+	transform: rotateY(0.5turn);
+}
+
+/* Back face rotated by default */
+.cardBack {
+	transform: rotateY(0.5turn);
+}
+
+/* Medium screens (tablet/desktop) */
+@media (min-width: 900px) {
+	.cardContent {
+		width: fit-content;
+		height: fit-content;
+		min-width: unset;
+		min-height: unset;
+	}
+}
+
+/* Large screens (desktop) */
+@media (min-width: 1200px) {
+	.cardContent {
+		width: 350px;
+		height: 400px;
+		min-width: unset;
+		min-height: unset;
+	}
+}

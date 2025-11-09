@@ -1,0 +1,95 @@
+:root {
+	--padding-xs: 0.5rem;
+	--padding-sm: 1rem;
+	--padding-md: 2.5rem;
+	--padding-lg: 5rem;
+	--padding-xl: 7rem;
+}
+
+/* Header layout */
+.header-div {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: var(--padding-sm);
+}
+
+/* Project Header */
+.projectHeader {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	align-items: center;
+}
+
+.projectHeader > div {
+	padding: 0 var(--padding-sm);
+}
+
+.titleDiv,
+.descDiv {
+	grid-column: 1 / 4;
+}
+
+.dateDiv,
+.button-group {
+	justify-self: end;
+}
+
+/* Task view table */
+.taskView > div {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	justify-content: center;
+	align-items: center;
+	padding: var(--padding-sm);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.tableHeader {
+	display: grid;
+	justify-items: center;
+}
+
+.taskData > div {
+	display: flex;
+	height: 100%;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Project card grid */
+.projectGrid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 500px));
+	gap: var(--padding-sm);
+	justify-items: center;
+	align-items: center;
+}
+
+/* Add Project / Task forms */
+.addProjectBody,
+.addTaskBody {
+	display: grid;
+	grid-template-columns: 1fr;
+	align-items: center;
+	justify-items: center;
+}
+
+.addProjectBody > div,
+.addTaskBody > div {
+	padding: var(--padding-sm);
+	gap: var(--padding-sm);
+	justify-self: start;
+	display: flex;
+	align-items: center;
+}
+
+.descInputDiv > * {
+	align-self: start;
+}
+
+.button-group {
+	display: grid;
+	padding: var(--padding-xs);
+}
